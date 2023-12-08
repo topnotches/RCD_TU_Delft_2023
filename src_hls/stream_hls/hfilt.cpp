@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <hls_math.h>
 #include <hls_stream.h>
 #include <ap_axi_sdata.h>
 
@@ -28,9 +29,9 @@ void hfilt (pixel_stream &src, pixel_stream &dst, uint8_t l, uint8_t c, uint8_t 
 #pragma HLS INTERFACE s_axilite port=r
 #pragma HLS PIPELINE II=1
 
-	const uint8_t kernel[3][3] ={{256>>4,256>>3,256>>4},
-								{256>>3,256>>5,256>>3},
-								{256>>4,256>>3, 256>>4}};
+	const int8_t kernel[3][3] ={{0,-1,0},
+								{-1,5,-1},
+								{0,-1, 0}};
 
 	static uint32_t active_pixels[3][3];
 	static uint32_t sum_mult[3][3];
@@ -95,48 +96,7 @@ void hfilt (pixel_stream &src, pixel_stream &dst, uint8_t l, uint8_t c, uint8_t 
 	static uint32_t dl = 0;
 	static uint32_t dc = 0;
 	
-	
-
-	uint32_t dn = 	SR(
-						(GR(active_pixels[0][selection[select_active_order][0]]) * kernel[0][0] + 
-						GR(active_pixels[0][selection[select_active_order][1]]) * kernel[0][1] +
-						GR(active_pixels[0][selection[select_active_order][2]]) * kernel[0][2] +
-						GR(active_pixels[1][selection[select_active_order][0]]) * kernel[1][0] +
-						GR(active_pixels[1][selection[select_active_order][1]]) * kernel[1][1] +
-						GR(active_pixels[1][selection[select_active_order][2]]) * kernel[1][2] +
-						GR(active_pixels[2][selection[select_active_order][0]]) * kernel[2][0] +
-						GR(active_pixels[2][selection[select_active_order][1]]) * kernel[2][1] +
-						GR(active_pixels[2][selection[select_active_order][2]]) * kernel[2][2]
-						)>> 8) +
-						
-						SG(
-						(GG(active_pixels[0][selection[select_active_order][0]]) * kernel[0][0] + 
-						GG(active_pixels[0][selection[select_active_order][1]]) * kernel[0][1] +
-						GG(active_pixels[0][selection[select_active_order][2]]) * kernel[0][2] +
-						GG(active_pixels[1][selection[select_active_order][0]]) * kernel[1][0] +
-						GG(active_pixels[1][selection[select_active_order][1]]) * kernel[1][1] +
-						GG(active_pixels[1][selection[select_active_order][2]]) * kernel[1][2] +
-						GG(active_pixels[2][selection[select_active_order][0]]) * kernel[2][0] +
-						GG(active_pixels[2][selection[select_active_order][1]]) * kernel[2][1] +
-						GG(active_pixels[2][selection[select_active_order][2]]) * kernel[2][2]
-						)>> 8) +
-
-						SB(
-						(GB(active_pixels[0][selection[select_active_order][0]]) * kernel[0][0] + 
-						GB(active_pixels[0][selection[select_active_order][1]]) * kernel[0][1] +
-						GB(active_pixels[0][selection[select_active_order][2]]) * kernel[0][2] +
-						GB(active_pixels[1][selection[select_active_order][0]]) * kernel[1][0] +
-						GB(active_pixels[1][selection[select_active_order][1]]) * kernel[1][1] +
-						GB(active_pixels[1][selection[select_active_order][2]]) * kernel[1][2] +
-						GB(active_pixels[2][selection[select_active_order][0]]) * kernel[2][0] +
-						GB(active_pixels[2][selection[select_active_order][1]]) * kernel[2][1] +
-						GB(active_pixels[2][selection[select_active_order][2]]) * kernel[2][2]
-						)>> 8);
-
-
-
-
-	
+		
 	// Top
 	active_pixels[0][selection[select_active_order][2]] = buffer[selection[select_order][0]][x];
 	
@@ -155,6 +115,47 @@ void hfilt (pixel_stream &src, pixel_stream &dst, uint8_t l, uint8_t c, uint8_t 
 	}
 	
 	
+
+	uint32_t dn = 	SR(
+						abs((uint8_t)GR(active_pixels[0][selection[select_active_order][0]]) * kernel[0][0] + 
+						(uint8_t)GR(active_pixels[0][selection[select_active_order][1]]) * kernel[0][1] +
+						(uint8_t)GR(active_pixels[0][selection[select_active_order][2]]) * kernel[0][2] +
+						(uint8_t)GR(active_pixels[1][selection[select_active_order][0]]) * kernel[1][0] +
+						(uint8_t)GR(active_pixels[1][selection[select_active_order][1]]) * kernel[1][1] +
+						(uint8_t)GR(active_pixels[1][selection[select_active_order][2]]) * kernel[1][2] +
+						(uint8_t)GR(active_pixels[2][selection[select_active_order][0]]) * kernel[2][0] +
+						(uint8_t)GR(active_pixels[2][selection[select_active_order][1]]) * kernel[2][1] +
+						(uint8_t)GR(active_pixels[2][selection[select_active_order][2]]) * kernel[2][2]
+						)>>1) +
+						
+						SG(
+						abs((uint8_t)GG(active_pixels[0][selection[select_active_order][0]]) * kernel[0][0] + 
+						(uint8_t)GG(active_pixels[0][selection[select_active_order][1]]) * kernel[0][1] +
+						(uint8_t)GG(active_pixels[0][selection[select_active_order][2]]) * kernel[0][2] +
+						(uint8_t)GG(active_pixels[1][selection[select_active_order][0]]) * kernel[1][0] +
+						(uint8_t)GG(active_pixels[1][selection[select_active_order][1]]) * kernel[1][1] +
+						(uint8_t)GG(active_pixels[1][selection[select_active_order][2]]) * kernel[1][2] +
+						(uint8_t)GG(active_pixels[2][selection[select_active_order][0]]) * kernel[2][0] +
+						(uint8_t)GG(active_pixels[2][selection[select_active_order][1]]) * kernel[2][1] +
+						(uint8_t)GG(active_pixels[2][selection[select_active_order][2]]) * kernel[2][2]
+						)>>1) +
+
+						SB(
+						abs((uint8_t)GB(active_pixels[0][selection[select_active_order][0]]) * kernel[0][0] + 
+						(uint8_t)GB(active_pixels[0][selection[select_active_order][1]]) * kernel[0][1] +
+						(uint8_t)GB(active_pixels[0][selection[select_active_order][2]]) * kernel[0][2] +
+						(uint8_t)GB(active_pixels[1][selection[select_active_order][0]]) * kernel[1][0] +
+						(uint8_t)GB(active_pixels[1][selection[select_active_order][1]]) * kernel[1][1] +
+						(uint8_t)GB(active_pixels[1][selection[select_active_order][2]]) * kernel[1][2] +
+						(uint8_t)GB(active_pixels[2][selection[select_active_order][0]]) * kernel[2][0] +
+						(uint8_t)GB(active_pixels[2][selection[select_active_order][1]]) * kernel[2][1] +
+						(uint8_t)GB(active_pixels[2][selection[select_active_order][2]]) * kernel[2][2]
+						)>>1);
+
+
+
+
+
 	/*
 	// Current (incoming) pixel data
 	uint32_t dr = p_in.data;

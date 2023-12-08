@@ -1,2 +1,2 @@
-parrot.png 2
+orangutan.png 1
 - 1
