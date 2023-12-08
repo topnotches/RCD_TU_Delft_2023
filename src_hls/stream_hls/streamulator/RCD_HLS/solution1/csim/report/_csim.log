@@ -1,8 +1,9 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../../../hfilt.cpp in debug mode
-   Generating csim.exe
+make: 'csim.exe' is up to date.
 orangutan.png 1
+parrot.png 1
+sutmig.png 1
 - 1
 HLS delay: 0 pixels (0 lines)
 INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 921600
