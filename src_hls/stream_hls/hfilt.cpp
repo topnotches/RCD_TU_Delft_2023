@@ -8,6 +8,7 @@
 #define BUFFER_LINES 3
 #define TOP_ROW 3
 #define MID_ROW 3
+#define CHECK_OVF 0xFFFFFF00
 
 #define GR(v) ((v)&0xFF)
 #define GG(v) (((v)&0xFF00)>>8)
@@ -47,36 +48,7 @@ void hfilt (pixel_stream &src, pixel_stream &dst, uint8_t l, uint8_t c, uint8_t 
 	static uint16_t x = 0;
 	static uint16_t y = 0;
 	static bool first_line = true;
-	// Top
-	static uint8_t po00;
-	static uint8_t po01;
-	static uint8_t po02;
-	
-	// middle
-	static uint8_t po10;
-	static uint8_t po11;
-	static uint8_t po12;
-	
-	// Top
-	static uint8_t po20;
-	static uint8_t po21;
-	static uint8_t po22;
 
-
-	// Top
-	static uint32_t so00;
-	static uint32_t so01;
-	static uint32_t so02;
-	
-	// middle
-	static uint32_t so10;
-	static uint32_t so11;
-	static uint32_t so12;
-	
-	// Top
-	static uint32_t so20;
-	static uint32_t so21;
-	static uint32_t so22;
 
 
 
@@ -96,7 +68,6 @@ void hfilt (pixel_stream &src, pixel_stream &dst, uint8_t l, uint8_t c, uint8_t 
 	static uint32_t dl = 0;
 	static uint32_t dc = 0;
 	
-		
 	// Top
 	active_pixels[0][selection[select_active_order][2]] = buffer[selection[select_order][0]][x];
 	
@@ -106,17 +77,12 @@ void hfilt (pixel_stream &src, pixel_stream &dst, uint8_t l, uint8_t c, uint8_t 
 	// Bottom
 	active_pixels[2][selection[select_active_order][2]] = p_in.data;
 
-	buffer[selection[select_order][2]][x] = p_in.data;
-	
-	if (select_active_order == 2) {
-		select_active_order = 0;
-	} else {
-		select_active_order++;
-	}
-	
-	
+		
+	// Copy previous pixel data to next output pixel
+	p_out = p_in;
 
-	uint32_t dn = 	SR(
+	// These summations need to be split up so we can handle edge-cases
+	uint16_t red_sum =
 						abs((uint8_t)GR(active_pixels[0][selection[select_active_order][0]]) * kernel[0][0] + 
 						(uint8_t)GR(active_pixels[0][selection[select_active_order][1]]) * kernel[0][1] +
 						(uint8_t)GR(active_pixels[0][selection[select_active_order][2]]) * kernel[0][2] +
@@ -126,10 +92,11 @@ void hfilt (pixel_stream &src, pixel_stream &dst, uint8_t l, uint8_t c, uint8_t 
 						(uint8_t)GR(active_pixels[2][selection[select_active_order][0]]) * kernel[2][0] +
 						(uint8_t)GR(active_pixels[2][selection[select_active_order][1]]) * kernel[2][1] +
 						(uint8_t)GR(active_pixels[2][selection[select_active_order][2]]) * kernel[2][2]
-						)>>1) +
-						
-						SG(
-						abs((uint8_t)GG(active_pixels[0][selection[select_active_order][0]]) * kernel[0][0] + 
+						);
+
+
+
+	uint16_t green_sum =abs((uint8_t)GG(active_pixels[0][selection[select_active_order][0]]) * kernel[0][0] + 
 						(uint8_t)GG(active_pixels[0][selection[select_active_order][1]]) * kernel[0][1] +
 						(uint8_t)GG(active_pixels[0][selection[select_active_order][2]]) * kernel[0][2] +
 						(uint8_t)GG(active_pixels[1][selection[select_active_order][0]]) * kernel[1][0] +
@@ -138,10 +105,11 @@ void hfilt (pixel_stream &src, pixel_stream &dst, uint8_t l, uint8_t c, uint8_t 
 						(uint8_t)GG(active_pixels[2][selection[select_active_order][0]]) * kernel[2][0] +
 						(uint8_t)GG(active_pixels[2][selection[select_active_order][1]]) * kernel[2][1] +
 						(uint8_t)GG(active_pixels[2][selection[select_active_order][2]]) * kernel[2][2]
-						)>>1) +
+						);
 
-						SB(
-						abs((uint8_t)GB(active_pixels[0][selection[select_active_order][0]]) * kernel[0][0] + 
+
+
+	uint16_t blue_sum = abs((uint8_t)GB(active_pixels[0][selection[select_active_order][0]]) * kernel[0][0] + 
 						(uint8_t)GB(active_pixels[0][selection[select_active_order][1]]) * kernel[0][1] +
 						(uint8_t)GB(active_pixels[0][selection[select_active_order][2]]) * kernel[0][2] +
 						(uint8_t)GB(active_pixels[1][selection[select_active_order][0]]) * kernel[1][0] +
@@ -150,42 +118,27 @@ void hfilt (pixel_stream &src, pixel_stream &dst, uint8_t l, uint8_t c, uint8_t 
 						(uint8_t)GB(active_pixels[2][selection[select_active_order][0]]) * kernel[2][0] +
 						(uint8_t)GB(active_pixels[2][selection[select_active_order][1]]) * kernel[2][1] +
 						(uint8_t)GB(active_pixels[2][selection[select_active_order][2]]) * kernel[2][2]
-						)>>1);
+						);
 
-
-
-
-
-	/*
-	// Current (incoming) pixel data
-	uint32_t dr = p_in.data;
+	uint8_t red = (CHECK_OVF & red_sum) ? 255 : red_sum;
+	uint8_t green = (CHECK_OVF & green_sum) ? 255 : green_sum;
+	uint8_t blue = (CHECK_OVF & blue_sum) ? 255 : blue_sum;
 	
 
+	uint32_t dn = 	SR(red) +
+						
+						SG(green) +
+
+						SB(blue);
 
 
 
-
-	
-	// Compute outgoing pixel data
-	uint32_t dn =
-			SR((GR(dl)*l+GR(dc)*c+GR(dr)*r)>>8) +
-			SG((GG(dl)*l+GG(dc)*c+GG(dr)*r)>>8) +
-			SB((GB(dl)*l+GB(dc)*c+GB(dr)*r)>>8);
-
-	// Move one pixel to the right
-	dl = dc;
-	dc = dr;
-
-	*/
 	p_out.data = dn;
 
 	////////////////////////////////
 
 	// Write pixel to destination
 	dst << p_out;
-
-	// Copy previous pixel data to next output pixel
-	p_out = p_in;
 
 	// Increment X and Y counters
 	if (p_in.last)
@@ -201,6 +154,17 @@ void hfilt (pixel_stream &src, pixel_stream &dst, uint8_t l, uint8_t c, uint8_t 
 	}
 	else
 		x++;
+
+	buffer[selection[select_order][2]][x] = p_in.data;
+	
+	if (select_active_order == 2) {
+		select_active_order = 0;
+	} else {
+		select_active_order++;
+	}
+	
+	
+
 }
 
 void stream (pixel_stream &src, pixel_stream &dst, int frame)

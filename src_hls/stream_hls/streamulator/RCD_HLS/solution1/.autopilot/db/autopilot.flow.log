@@ -6563,3 +6563,1391 @@ INFO: [SIM 211-3] *************** CSIM finish ***************
 Command     csim_design done; 5.37 sec.
 INFO: [HLS 200-111] Finished Command csim_design CPU user time: 5.23 seconds. CPU system time: 0.16 seconds. Elapsed time: 5.37 seconds; current allocated memory: 0.645 MB.
 Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:18:53 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.85 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.06 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.49 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 10.71 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 10.08 seconds. CPU system time: 0.6 seconds. Elapsed time: 10.71 seconds; current allocated memory: 0.645 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:19:29 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.94 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.08 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.23 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 7.12 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 13.09 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 12.42 seconds. CPU system time: 0.68 seconds. Elapsed time: 13.09 seconds; current allocated memory: 0.645 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:19:58 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.91 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.05 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.16 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 7.24 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 12.93 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 12.21 seconds. CPU system time: 0.72 seconds. Elapsed time: 12.93 seconds; current allocated memory: 0.645 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:20:31 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.94 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.05 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.16 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command     csim_design done; error code: 2; 4.96 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 4.48 seconds. CPU system time: 0.47 seconds. Elapsed time: 4.96 seconds; current allocated memory: 0.668 MB.
+Command   ap_source done; error code: 1; 6.14 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:21:15 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.97 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.08 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.2 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command     csim_design done; error code: 2; 4.75 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 4.26 seconds. CPU system time: 0.5 seconds. Elapsed time: 4.75 seconds; current allocated memory: 0.672 MB.
+Command   ap_source done; error code: 1; 5.96 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:21:31 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.96 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.08 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.16 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 6.9 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 12.39 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 11.82 seconds. CPU system time: 0.59 seconds. Elapsed time: 12.39 seconds; current allocated memory: 0.645 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:21:57 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.94 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.06 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.16 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 6.94 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 12.65 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 12.04 seconds. CPU system time: 0.61 seconds. Elapsed time: 12.65 seconds; current allocated memory: 0.645 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:22:34 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.91 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.03 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.1 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 6.94 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 12.42 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 11.77 seconds. CPU system time: 0.65 seconds. Elapsed time: 12.42 seconds; current allocated memory: 0.648 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:23:08 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.93 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.04 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.15 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 6.98 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 12.56 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 11.9 seconds. CPU system time: 0.66 seconds. Elapsed time: 12.56 seconds; current allocated memory: 0.645 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:23:45 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.93 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.04 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.13 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+Command     csim_design done; error code: 1; 5.56 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.12 seconds. CPU system time: 0.1 seconds. Elapsed time: 5.56 seconds; current allocated memory: 8.633 MB.
+Command   ap_source done; error code: 1; 6.71 sec.
+Command vitis_hls_bin done; error code: 1; 6.73 sec.
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:24:16 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.85 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 0.95 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.03 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 6.97 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 12.58 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 11.84 seconds. CPU system time: 0.74 seconds. Elapsed time: 12.58 seconds; current allocated memory: 0.645 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:24:44 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 1.03 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.14 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.23 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 8.25 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 14.21 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 13.56 seconds. CPU system time: 0.65 seconds. Elapsed time: 14.21 seconds; current allocated memory: 0.645 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:25:35 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.91 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.02 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.13 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command     csim_design done; error code: 2; 4.79 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 4.36 seconds. CPU system time: 0.44 seconds. Elapsed time: 4.79 seconds; current allocated memory: 0.672 MB.
+Command   ap_source done; error code: 1; 5.93 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:25:53 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.96 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.08 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.15 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 6.87 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 13.09 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 12.39 seconds. CPU system time: 0.72 seconds. Elapsed time: 13.09 seconds; current allocated memory: 0.645 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:26:32 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.98 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.14 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.24 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 7.1 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 13.1 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 12.38 seconds. CPU system time: 0.73 seconds. Elapsed time: 13.1 seconds; current allocated memory: 0.645 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:28:06 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.92 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.06 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.14 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.11 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 10.38 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 9.72 seconds. CPU system time: 0.68 seconds. Elapsed time: 10.38 seconds; current allocated memory: 0.645 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:29:41 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.95 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.06 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.16 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.5 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 11.7 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 10.99 seconds. CPU system time: 0.73 seconds. Elapsed time: 11.7 seconds; current allocated memory: 0.645 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:30:41 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.9 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.11 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.61 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 11.19 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 10.5 seconds. CPU system time: 0.7 seconds. Elapsed time: 11.19 seconds; current allocated memory: 0.648 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:31:54 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.95 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.07 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.17 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.58 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 11.18 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 10.52 seconds. CPU system time: 0.68 seconds. Elapsed time: 11.18 seconds; current allocated memory: 0.648 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:33:42 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.94 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.06 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.15 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.64 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 11.63 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 10.94 seconds. CPU system time: 0.69 seconds. Elapsed time: 11.63 seconds; current allocated memory: 0.645 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:35:46 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.89 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.01 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.1 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.46 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 10.98 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 10.27 seconds. CPU system time: 0.7 seconds. Elapsed time: 10.98 seconds; current allocated memory: 0.648 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:36:59 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.92 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.03 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.12 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.47 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 11.08 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 10.36 seconds. CPU system time: 0.74 seconds. Elapsed time: 11.08 seconds; current allocated memory: 0.648 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:37:26 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 1.06 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.22 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.32 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO-FLOW: AESL_CSIM::csim_cmd_wrap errorInfo:
+4
+    while executing
+"::AESL_CSIM::csim_cmd_wrap $args"
+INFO-FLOW: Caught error in csim_design: 4
+    while executing
+"ap_internal_csim_design "
+Command     csim_design done; error code: 2; 4.8 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 4.29 seconds. CPU system time: 0.52 seconds. Elapsed time: 4.8 seconds; current allocated memory: 0.672 MB.
+Command   ap_source done; error code: 1; 6.13 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:37:46 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.9 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.09 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.41 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 10.98 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 10.36 seconds. CPU system time: 0.64 seconds. Elapsed time: 10.98 seconds; current allocated memory: 0.648 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:38:44 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.98 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.11 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.18 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.79 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 11.21 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 10.51 seconds. CPU system time: 0.7 seconds. Elapsed time: 11.21 seconds; current allocated memory: 0.648 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:39:27 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.96 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.08 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.18 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 7.43 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 7.72 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 7.48 seconds. CPU system time: 0.24 seconds. Elapsed time: 7.72 seconds; current allocated memory: 0.645 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:44:18 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 1.06 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 1.14 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.21 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.57 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 5.79 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 5.66 seconds. CPU system time: 0.12 seconds. Elapsed time: 5.79 seconds; current allocated memory: 0.633 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 18:46:07 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.83 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 0.94 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.01 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.48 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 10.82 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 10.13 seconds. CPU system time: 0.59 seconds. Elapsed time: 10.82 seconds; current allocated memory: 0.629 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 19:05:40 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.85 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 0.97 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.05 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.76 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 10.94 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 10.37 seconds. CPU system time: 0.58 seconds. Elapsed time: 10.94 seconds; current allocated memory: 0.629 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 19:06:06 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.83 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 0.96 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.04 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.64 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 10.84 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 10.24 seconds. CPU system time: 0.6 seconds. Elapsed time: 10.84 seconds; current allocated memory: 0.629 MB.
+Execute     cleanup_all 
+INFO-FLOW: Workspace /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1 opened at Fri Dec 08 19:09:15 CET 2023
+Execute       ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       set_part xc7z020-clg400-1 
+Execute         create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/topnotches/Xilinx/Vitis_HLS/2023.2/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/topnotches/Xilinx/Vivado/2023.2/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command         create_platform done; 0.85 sec.
+Execute         source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/util.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/xilinx/DSP48/dsp48.gen 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_compile -quiet -complex-mul-dsp=0 
+Command       set_part done; 0.96 sec.
+Execute       send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command     open_solution done; 1.02 sec.
+Execute     csim_design 
+INFO: [HLS 200-1510] Running: csim_design 
+INFO-FLOW: Running SLX 'csim' proc: ::SLX::run_csim
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       send_msg_by_id INFO @200-2036@%s debug 
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 5.61 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 10.66 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 10.02 seconds. CPU system time: 0.62 seconds. Elapsed time: 10.66 seconds; current allocated memory: 0.629 MB.
+Execute     cleanup_all 
