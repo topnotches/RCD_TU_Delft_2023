@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="hfilt.cpp" path="/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/hfilt.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="axipng.cpp" path="/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/axipng.cpp"/>
+    <originFiles name="axipng.h" path="/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/axipng.h"/>
+    <originFiles name="miniz.c" path="/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/miniz.c"/>
+    <originFiles name="miniz.h" path="/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/miniz.h"/>
+    <originFiles name="spng.c" path="/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/spng.c"/>
+    <originFiles name="spng.h" path="/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/spng.h"/>
+    <originFiles name="streamulator.cpp" path="/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/streamulator.cpp"/>
+    <originFiles name="streamulator.h" path="/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/streamulator.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

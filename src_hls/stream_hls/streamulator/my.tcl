@@ -1,0 +1,4 @@
+open_project RCD_HLS
+open_solution solution1
+csim_design
+exit
