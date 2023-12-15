@@ -1,0 +1,19 @@
+{
+  "0": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "hfilt.cpp",
+    "fileloc": 23,
+    "instructions": 359,
+    "loads": {
+      "G": 16,
+      "L": 21
+    },
+    "name": "hfilt",
+    "stores": {
+      "G": 15,
+      "L": 21
+    },
+    "total_instructions": 408
+  }
+}

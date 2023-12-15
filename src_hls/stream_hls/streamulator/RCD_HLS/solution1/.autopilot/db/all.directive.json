@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "hfilt",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "hfilt"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/csynth.tcl",
+    "sourceLine": 22,
+    "success": true
+  }
+]

@@ -1,8 +1,8 @@
-<project xmlns="com.autoesl.autopilot.project" top="" name="RCD_HLS" projectType="C/C++">
+<project xmlns="com.autoesl.autopilot.project" name="RCD_HLS" top="hfilt" projectType="C/C++">
     <includePaths/>
     <libraryPaths/>
     <Simulation argv="">
-        <SimFlow name="csim" csimMode="0" lastCsimMode="0" setup="false" optimizeCompile="false" clean="false" ldflags="" mflags=""/>
+        <SimFlow name="csim" ldflags="" mflags="" csimMode="0" lastCsimMode="0" setup="false" optimizeCompile="false" clean="false"/>
     </Simulation>
     <files xmlns="">
         <file name="../../axipng.cpp" sc="0" tb="1" cflags="-Wno-unknown-pragmas" csimflags="" blackbox="false"/>

@@ -2,13 +2,39 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
-      <csimLog>
-        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="RCD_HLS" solutionName="solution1" date="2023-12-08T11:21:03.318+0100"/>
-      </csimLog>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'active_pixels_2_2' is power-on initialization." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.578+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'active_pixels_2_1' is power-on initialization." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.565+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'active_pixels_2_0' is power-on initialization." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.564+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'active_pixels_1_2' is power-on initialization." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.563+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'active_pixels_1_1' is power-on initialization." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.562+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'active_pixels_1_0' is power-on initialization." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.561+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'active_pixels_0_2' is power-on initialization." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.560+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'active_pixels_0_1' is power-on initialization." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.558+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'active_pixels_0_0' is power-on initialization." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.558+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'select_order' is power-on initialization." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.557+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'select_active_order' is power-on initialization." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.556+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'x' is power-on initialization." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.555+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'y' is power-on initialization." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.553+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.545+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'hfilt/buffer' to 'hfilt/buffer_r' to avoid the conflict with HDL keywords or other object names." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.392+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_2P_LUTRAM' (../hfilt.cpp:41): '' does not exist or is optimized away." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.391+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-303] Cannot apply memory assignment of 'RAM_2P_LUTRAM' (../hfilt.cpp:40): '' does not exist or is optimized away." projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:29.389+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5541] extra token before variable expression is ignored (../hfilt.cpp:27:35)" projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:21.842+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5541] extra token before variable expression is ignored (../hfilt.cpp:26:35)" projectName="RCD_HLS" solutionName="solution1" date="2023-12-15T15:25:07.629+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
       <csimLog/>
     </logs>
   </warningLogs>

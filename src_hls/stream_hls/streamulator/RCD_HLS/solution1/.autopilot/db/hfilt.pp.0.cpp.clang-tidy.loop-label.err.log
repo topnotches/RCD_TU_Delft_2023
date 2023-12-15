@@ -1,0 +1,4 @@
+2 warnings and 29 errors generated.
+Error while processing /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/.autopilot/db/hfilt.pp.0.cpp.
+clang-tidy applied 130 of 130 suggested fixes.
+Suppressed 2 warnings (2 with check filters).
