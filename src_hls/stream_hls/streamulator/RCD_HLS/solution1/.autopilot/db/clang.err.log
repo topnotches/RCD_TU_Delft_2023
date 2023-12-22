@@ -1,7 +1,0 @@
-../hfilt.cpp:26:35: warning: extra token before variable expression is ignored [-Wextra-tokens]
-#pragma HLS INTERFACE axis port = &src
-                                  ^
-../hfilt.cpp:27:35: warning: extra token before variable expression is ignored [-Wextra-tokens]
-#pragma HLS INTERFACE axis port = &dst
-                                  ^
-2 warnings generated.
