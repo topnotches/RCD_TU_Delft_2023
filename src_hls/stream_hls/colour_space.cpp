@@ -48,6 +48,8 @@ void hfilt(pixel_stream &src, pixel_stream &dst, &bool filtering)
 	static uint8_t select_order = 0;
 	// Data to be stored across 'function calls'
 	static uint16_t x = 0;
+
+	bbool 
 	static uint16_t y = 0;
 	// Pixel data to be stored across 'function calls'
 	pixel_data p_out;
@@ -59,6 +61,7 @@ void hfilt(pixel_stream &src, pixel_stream &dst, &bool filtering)
 	// Reset X and Y counters on user signal
 	if (p_in.user)
 	{
+
 		x = y = 0;
 		select_active_order = 0;
 		select_order = 0;
@@ -130,15 +133,6 @@ void hfilt(pixel_stream &src, pixel_stream &dst, &bool filtering)
 	// Write pixel to destination
 	dst << p_out;
 
-	// Copy previous pixel data to next output pixel
-	if (x == 0 && y == 0)  {
-        p_out.keep = ~p_in.keep;
-        //p_out.strb = ~p_in.strb;
-        //p_out.user = ~p_in.user;
-        p_out.last = ~p_in.last;
-        p_out.id =   ~p_in.id;
-        p_out.dest = ~p_in.dest;
-	}
 	
 
 	// Increment X and Y counters
@@ -146,6 +140,7 @@ void hfilt(pixel_stream &src, pixel_stream &dst, &bool filtering)
 	{
 		x = 0;
 		y++;
+		
 		if (select_order == 2)
 		{
 			select_order = 0;
