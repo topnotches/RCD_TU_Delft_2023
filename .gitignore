@@ -1,5 +1,5 @@
 
 
-./src_hls/stream_hls/streamulator/RCD_HLS/
+src_hls/stream_hls/streamulator/RCD_HLS/
 
-./src_hls/stream_hls/streamulator/PYNQ-Z2
+src_hls/stream_hls/streamulator/PYNQ-Z2
