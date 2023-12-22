@@ -32429,14 +32429,18 @@ typedef hls::stream<pixel_data> pixel_stream;
 
 __attribute__((sdx_kernel("hfilt", 0))) void hfilt(pixel_stream &src, pixel_stream &dst)
 {
-#line 22 "/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/csynth.tcl"
+#line 23 "/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/csynth.tcl"
+#pragma HLSDIRECTIVE TOP name=hfilt
+# 24 "../hfilt.cpp"
+
+#line 7 "/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=hfilt
 # 24 "../hfilt.cpp"
 
 #pragma HLS INTERFACE ap_ctrl_none port = return
 #pragma HLS INTERFACE axis port = &src
 #pragma HLS INTERFACE axis port = &dst
-#pragma HLS PIPELINE II = 0
+#pragma HLS PIPELINE II = 1
 
  const int8_t kernel[3][3] = {{0, -1, 0},
          {-1, 5, -1},

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'hfilt'" level="0">
-<item name = "Date">Fri Dec 15 15:25:29 2023
+<item name = "Date">Fri Dec 15 17:18:35 2023
 </item>
 <item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
 <item name = "Project">RCD_HLS</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.156 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.064 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">5, 5, 50.000 ns, 50.000 ns, 6, 6, no</column>
+<column name="">6, 6, 60.000 ns, 60.000 ns, 1, 1, yes</column>
 </table>
 </item>
 <item name = "Detail">

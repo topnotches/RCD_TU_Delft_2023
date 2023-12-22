@@ -20,19 +20,19 @@
             <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
             <column name="">(1) loop simplification, 422, loop and instruction simplification</column>
             <column name="">(2) parallelization, 408, loops are unrolled or pipelined to meet performance targets</column>
-            <column name="">(3) array partition, 310, arrays are partitioned to meet performance targets</column>
-            <column name="">(4) simplification, 310, simplification of design after performance transformations</column>
+            <column name="">(3) array partition, 368, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification, 330, simplification of design after performance transformations</column>
             <column name="">, , </column>
             <column name="HW Transforms">, , After hardware transfomations</column>
-            <column name="">(1) lowering, 268, initial conversion to HW specific instructions</column>
-            <column name="">(2) optimizations, 244, high level synthesis optimizations</column>
+            <column name="">(1) lowering, 288, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations, 264, high level synthesis optimizations</column>
         </table>
     </item>
     <item name="Instructions per Function for each Compilation Phase">
         <hiertable>
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
-                <row id="0" col0="hfilt" col1="hfilt.cpp:23" col2="959" col3="294" col4="408" col5="310" col6="244"/>
+                <row id="0" col0="hfilt" col1="hfilt.cpp:23" col2="959" col3="294" col4="408" col5="330" col6="264"/>
             </rows>
             <notes/>
         </hiertable>

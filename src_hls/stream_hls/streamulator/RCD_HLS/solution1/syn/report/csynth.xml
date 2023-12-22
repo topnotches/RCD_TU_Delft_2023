@@ -9,24 +9,27 @@
         <TopModelName>hfilt</TopModelName>
         <TargetClockPeriod>10.00</TargetClockPeriod>
         <ClockUncertainty>2.70</ClockUncertainty>
+        <TargetInitiationInterval>1</TargetInitiationInterval>
         <FlowTarget>vivado</FlowTarget>
     </UserAssignments>
     <PerformanceEstimates>
-        <PipelineType>no</PipelineType>
+        <PipelineType>yes</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>7.156</EstimatedClockPeriod>
+            <EstimatedClockPeriod>7.064</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>5</Best-caseLatency>
-            <Average-caseLatency>5</Average-caseLatency>
-            <Worst-caseLatency>5</Worst-caseLatency>
-            <Best-caseRealTimeLatency>50.000 ns</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>50.000 ns</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>50.000 ns</Worst-caseRealTimeLatency>
-            <Interval-min>6</Interval-min>
-            <Interval-max>6</Interval-max>
+            <Best-caseLatency>6</Best-caseLatency>
+            <Average-caseLatency>6</Average-caseLatency>
+            <Worst-caseLatency>6</Worst-caseLatency>
+            <Best-caseRealTimeLatency>60.000 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>60.000 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>60.000 ns</Worst-caseRealTimeLatency>
+            <PipelineInitiationInterval>1</PipelineInitiationInterval>
+            <PipelineDepth>7</PipelineDepth>
+            <Interval-min>1</Interval-min>
+            <Interval-max>1</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfViolations>
             <IssueType>-</IssueType>
@@ -37,8 +40,8 @@
     <AreaEstimates>
         <Resources>
             <BRAM_18K>0</BRAM_18K>
-            <FF>689</FF>
-            <LUT>3033</LUT>
+            <FF>1171</FF>
+            <LUT>2478</LUT>
             <DSP>0</DSP>
             <URAM>0</URAM>
         </Resources>
@@ -293,7 +296,7 @@
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="2">
             <ModuleName>hfilt</ModuleName>
-            <BindInstances>add_ln67_fu_402_p2 add_ln70_fu_423_p2 add_ln75_fu_444_p2 add_ln84_fu_904_p2 add_ln83_1_fu_699_p2 add_ln83_fu_920_p2 empty_17_fu_1093_p2 add_ln95_fu_969_p2 add_ln94_1_fu_763_p2 add_ln94_fu_985_p2 empty_19_fu_1108_p2 add_ln105_fu_1034_p2 add_ln104_1_fu_827_p2 add_ln104_fu_1050_p2 empty_21_fu_1123_p2 add_ln146_fu_1253_p2 add_ln153_fu_1264_p2 add_ln157_fu_1277_p2 add_ln165_fu_1312_p2 selection_0_U buffer_r_U selection_2_U selection_1_U</BindInstances>
+            <BindInstances>add_ln84_fu_915_p2 add_ln83_1_fu_731_p2 add_ln83_fu_741_p2 empty_15_fu_1068_p2 add_ln95_fu_967_p2 add_ln94_1_fu_808_p2 add_ln94_fu_818_p2 empty_17_fu_1083_p2 add_ln105_fu_1019_p2 add_ln104_1_fu_885_p2 add_ln104_fu_895_p2 empty_19_fu_1098_p2 add_ln146_fu_1228_p2 add_ln153_fu_388_p2 add_ln157_fu_474_p2 add_ln165_fu_493_p2 hfilt_stream_stream_axis_0_selection_2_U hfilt_stream_stream_axis_0_buffer_2_U hfilt_stream_stream_axis_0_buffer_1_U hfilt_stream_stream_axis_0_buffer_U hfilt_stream_stream_axis_0_selection_U hfilt_stream_stream_axis_0_selection_1_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
@@ -303,17 +306,19 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.156</EstimatedClockPeriod>
+                    <TargetInitiationInterval>1</TargetInitiationInterval>
+                    <EstimatedClockPeriod>7.064</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>5</Best-caseLatency>
-                    <Average-caseLatency>5</Average-caseLatency>
-                    <Worst-caseLatency>5</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>50.000 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>50.000 ns</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>50.000 ns</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>6</PipelineInitiationInterval>
-                    <PipelineType>no</PipelineType>
+                    <Best-caseLatency>6</Best-caseLatency>
+                    <Average-caseLatency>6</Average-caseLatency>
+                    <Worst-caseLatency>6</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>60.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>60.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>60.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>7</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
@@ -326,12 +331,12 @@
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
-                    <FF>689</FF>
+                    <FF>1171</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>~0</UTIL_FF>
-                    <LUT>3033</LUT>
+                    <UTIL_FF>1</UTIL_FF>
+                    <LUT>2478</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>5</UTIL_LUT>
+                    <UTIL_LUT>4</UTIL_LUT>
                     <DSP>0</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
@@ -341,29 +346,28 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_fu_402_p2" SOURCE="../hfilt.cpp:67" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln67"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_fu_423_p2" SOURCE="../hfilt.cpp:70" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln70"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln75_fu_444_p2" SOURCE="../hfilt.cpp:75" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln75"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln84_fu_904_p2" SOURCE="../hfilt.cpp:84" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln84"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln83_1_fu_699_p2" SOURCE="../hfilt.cpp:83" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln83_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln83_fu_920_p2" SOURCE="../hfilt.cpp:83" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln83"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="empty_17_fu_1093_p2" SOURCE="../hfilt.cpp:86" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_17"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln95_fu_969_p2" SOURCE="../hfilt.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln95"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln94_1_fu_763_p2" SOURCE="../hfilt.cpp:94" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln94_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln94_fu_985_p2" SOURCE="../hfilt.cpp:94" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln94"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="empty_19_fu_1108_p2" SOURCE="../hfilt.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_19"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln105_fu_1034_p2" SOURCE="../hfilt.cpp:105" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln105"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln104_1_fu_827_p2" SOURCE="../hfilt.cpp:104" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln104_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln104_fu_1050_p2" SOURCE="../hfilt.cpp:104" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln104"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="empty_21_fu_1123_p2" SOURCE="../hfilt.cpp:107" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_21"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln146_fu_1253_p2" SOURCE="../hfilt.cpp:146" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln146"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln153_fu_1264_p2" SOURCE="../hfilt.cpp:153" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln153"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln157_fu_1277_p2" SOURCE="../hfilt.cpp:157" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln157"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln165_fu_1312_p2" SOURCE="../hfilt.cpp:165" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln165"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="selection_0_U" SOURCE="" STORAGESIZE="2 3 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_2p" URAM="0" VARIABLE="selection_0"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="buffer_r_U" SOURCE="" STORAGESIZE="32 3840 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_2p" URAM="0" VARIABLE="buffer_r"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="selection_2_U" SOURCE="" STORAGESIZE="2 3 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_2p" URAM="0" VARIABLE="selection_2"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="selection_1_U" SOURCE="" STORAGESIZE="2 3 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_2p" URAM="0" VARIABLE="selection_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln84_fu_915_p2" SOURCE="../hfilt.cpp:84" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln84"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln83_1_fu_731_p2" SOURCE="../hfilt.cpp:83" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln83_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln83_fu_741_p2" SOURCE="../hfilt.cpp:83" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln83"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="empty_15_fu_1068_p2" SOURCE="../hfilt.cpp:86" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln95_fu_967_p2" SOURCE="../hfilt.cpp:95" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln95"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln94_1_fu_808_p2" SOURCE="../hfilt.cpp:94" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln94_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln94_fu_818_p2" SOURCE="../hfilt.cpp:94" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln94"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="empty_17_fu_1083_p2" SOURCE="../hfilt.cpp:97" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_17"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln105_fu_1019_p2" SOURCE="../hfilt.cpp:105" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln105"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln104_1_fu_885_p2" SOURCE="../hfilt.cpp:104" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln104_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln104_fu_895_p2" SOURCE="../hfilt.cpp:104" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln104"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="empty_19_fu_1098_p2" SOURCE="../hfilt.cpp:107" STORAGESUBTYPE="" URAM="0" VARIABLE="empty_19"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln146_fu_1228_p2" SOURCE="../hfilt.cpp:146" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln146"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln153_fu_388_p2" SOURCE="../hfilt.cpp:153" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln153"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln157_fu_474_p2" SOURCE="../hfilt.cpp:157" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln157"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln165_fu_493_p2" SOURCE="../hfilt.cpp:165" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln165"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="hfilt_stream_stream_axis_0_selection_2_U" SOURCE="" STORAGESIZE="2 3 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_2p" URAM="0" VARIABLE="hfilt_stream_stream_axis_0_selection_2"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="hfilt_stream_stream_axis_0_buffer_2_U" SOURCE="" STORAGESIZE="24 1280 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_2p" URAM="0" VARIABLE="hfilt_stream_stream_axis_0_buffer_2"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="hfilt_stream_stream_axis_0_buffer_1_U" SOURCE="" STORAGESIZE="24 1280 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_2p" URAM="0" VARIABLE="hfilt_stream_stream_axis_0_buffer_1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_2p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_2p" PRAGMA="pragma" RTLNAME="hfilt_stream_stream_axis_0_buffer_U" SOURCE="" STORAGESIZE="24 1280 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_2p" URAM="0" VARIABLE="hfilt_stream_stream_axis_0_buffer"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="hfilt_stream_stream_axis_0_selection_U" SOURCE="" STORAGESIZE="2 3 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_2p" URAM="0" VARIABLE="hfilt_stream_stream_axis_0_selection"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="hfilt_stream_stream_axis_0_selection_1_U" SOURCE="" STORAGESIZE="2 3 1" STORAGESUBTYPE="" STORAGEUSAGE="rom_2p" URAM="0" VARIABLE="hfilt_stream_stream_axis_0_selection_1"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -484,10 +488,15 @@
         <Pragma type="interface" location="../hfilt.cpp:27" status="warning" parentFunction="hfilt" variable="" isDirective="0" options="axis port = &amp;dst">
             <Msg msg_id="207-5541" msg_severity="WARNING" msg_body="extra token before variable expression is ignored"/>
         </Pragma>
-        <Pragma type="pipeline" location="../hfilt.cpp:28" status="valid" parentFunction="hfilt" variable="" isDirective="0" options="II = 0"/>
+        <Pragma type="pipeline" location="../hfilt.cpp:28" status="valid" parentFunction="hfilt" variable="" isDirective="0" options="II = 1"/>
         <Pragma type="bind_storage" location="../hfilt.cpp:39" status="valid" parentFunction="hfilt" variable="buffer[0]" isDirective="0" options="variable=buffer[0] type=RAM_2P impl=lutram latency=-1"/>
         <Pragma type="bind_storage" location="../hfilt.cpp:40" status="valid" parentFunction="hfilt" variable="buffer[1]" isDirective="0" options="variable=buffer[1] type=RAM_2P impl=lutram latency=-1"/>
         <Pragma type="bind_storage" location="../hfilt.cpp:41" status="valid" parentFunction="hfilt" variable="buffer[2]" isDirective="0" options="variable=buffer[2] type=RAM_2P impl=lutram latency=-1"/>
     </PragmaReport>
+    <AutoPragmaReport>
+        <AutoPragma type="array_partition" parentFunction="hfilt" options="dim=1 type=complete  variable=_ZZ5hfiltRN3hls6streamINS_4axisI7ap_uintILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_E13active_pixels" pragmaLocId="../hfilt.cpp:34:0" srcPragmaType="pipeline" srcPragmaLoc="../hfilt.cpp:28" srcPragmaSource="pragma" srcIsDirective="0" variable="hfilt(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;)::active_pixels" varLoc=""/>
+        <AutoPragma type="array_partition" parentFunction="hfilt" options="dim=1 type=complete  variable=_ZZ5hfiltRN3hls6streamINS_4axisI7ap_uintILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_E6buffer" pragmaLocId="../hfilt.cpp:38:0" srcPragmaType="pipeline" srcPragmaLoc="../hfilt.cpp:28" srcPragmaSource="pragma" srcIsDirective="0" variable="hfilt(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;)::buffer" varLoc=""/>
+        <AutoPragma type="array_partition" parentFunction="hfilt" options="dim=2 type=complete  variable=_ZZ5hfiltRN3hls6streamINS_4axisI7ap_uintILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_E9selection" pragmaLocId="../hfilt.cpp:43:0" srcPragmaType="pipeline" srcPragmaLoc="../hfilt.cpp:28" srcPragmaSource="pragma" srcIsDirective="0" variable="hfilt(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 1ul, 1ul, 1ul, (unsigned char)56, false&gt;, 0&gt;&amp;)::selection" varLoc=""/>
+    </AutoPragmaReport>
 </profile>
 

@@ -638,7 +638,10 @@ In file included from /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology
 /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology/autopilot/etc/hls_hypot_apfixed.h:170:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hypot_fixed_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS unroll
         ^
-/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/csynth.tcl:22:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=hfilt_XLX_SEP_ PragmaOptions=name=hfilt_XLX_SEP_ [-Wdump-hls-pragmas]
+/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/csynth.tcl:23:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=hfilt_XLX_SEP_ PragmaOptions=name=hfilt_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=hfilt
+        ^
+/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/directives.tcl:7:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=hfilt_XLX_SEP_ PragmaOptions=name=hfilt_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=hfilt
         ^
 ../hfilt.cpp:25:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hfilt_XLX_SEP_ PragmaOptions=ap_ctrl_none port = return_XLX_SEP_ [-Wdump-hls-pragmas]
@@ -656,8 +659,8 @@ In file included from /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology
 ../hfilt.cpp:27:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hfilt_XLX_SEP_ PragmaOptions=axis port = &dst_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INTERFACE axis port = &dst
         ^
-../hfilt.cpp:28:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hfilt_XLX_SEP_ PragmaOptions=II = 0_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS PIPELINE II = 0
+../hfilt.cpp:28:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hfilt_XLX_SEP_ PragmaOptions=II = 1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II = 1
         ^
 ../hfilt.cpp:39:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hfilt_XLX_SEP_ PragmaOptions=variable=buffer[0] type=RAM_2P impl=lutram latency=-1_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS bind_storage variable=buffer[0] type=RAM_2P impl=lutram latency=-1
@@ -668,4 +671,4 @@ In file included from /home/topnotches/Xilinx/Vitis_HLS/2023.2/common/technology
 ../hfilt.cpp:41:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=bind_storage_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hfilt_XLX_SEP_ PragmaOptions=variable=buffer[2] type=RAM_2P impl=lutram latency=-1_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS bind_storage variable=buffer[2] type=RAM_2P impl=lutram latency=-1
         ^
-211 warnings generated.
+212 warnings generated.

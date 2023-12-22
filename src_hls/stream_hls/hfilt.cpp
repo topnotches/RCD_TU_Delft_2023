@@ -20,12 +20,14 @@
 typedef ap_axiu<32, 1, 1, 1> pixel_data;
 typedef hls::stream<pixel_data> pixel_stream;
 
-void hfilt(pixel_stream &src, pixel_stream &dst)
+void hfilt(pixel_stream &src, pixel_stream &dst, &bool filtering)
 {
+
+#pragma HLS INTERFACE axis port = &filtering
 #pragma HLS INTERFACE ap_ctrl_none port = return
 #pragma HLS INTERFACE axis port = &src
 #pragma HLS INTERFACE axis port = &dst
-#pragma HLS PIPELINE II = 0
+#pragma HLS PIPELINE II = 1
 
 	const int8_t kernel[3][3] = {{0, -1, 0},
 								 {-1, 5, -1},
@@ -116,7 +118,7 @@ void hfilt(pixel_stream &src, pixel_stream &dst)
 		 SG(green) +
 		 SB(blue);
 
-	if (x <= 1 || y <= 1)
+	if (x <= 1 || y <= 1 || filtering)
 	{
 		dn = p_in.data;
 	}

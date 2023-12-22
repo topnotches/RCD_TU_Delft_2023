@@ -24,19 +24,19 @@
 | Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
 |               | (1) loop simplification     | 422          | loop and instruction simplification                                                    |
 |               | (2) parallelization         | 408          | loops are unrolled or pipelined to meet performance targets                            |
-|               | (3) array partition         | 310          | arrays are partitioned to meet performance targets                                     |
-|               | (4) simplification          | 310          | simplification of design after performance transformations                             |
+|               | (3) array partition         | 368          | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          | 330          | simplification of design after performance transformations                             |
 |               |                             |              |                                                                                        |
 | HW Transforms |                             |              | After hardware transfomations                                                          |
-|               | (1) lowering                | 268          | initial conversion to HW specific instructions                                         |
-|               | (2) optimizations           | 244          | high level synthesis optimizations                                                     |
+|               | (1) lowering                | 288          | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           | 264          | high level synthesis optimizations                                                     |
 +---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
 
 * Instructions per Function for each Compilation Phase
 +----------+--------------+--------------+---------------+--------------+-------------+---------------+
 | Function | Location     | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
 +----------+--------------+--------------+---------------+--------------+-------------+---------------+
-|   hfilt  | hfilt.cpp:23 | 959          | 294           | 408          | 310         | 244           |
+|   hfilt  | hfilt.cpp:23 | 959          | 294           | 408          | 330         | 264           |
 +----------+--------------+--------------+---------------+--------------+-------------+---------------+
 
 * Design Size Message Settings

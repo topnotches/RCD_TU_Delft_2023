@@ -2,8 +2,8 @@ set moduleName hfilt
 set isTopModule 1
 set isCombinational 0
 set isDatapathOnly 0
-set isPipelined 0
-set pipeline_type none
+set isPipelined 1
+set pipeline_type function
 set FunctionProtocol ap_ctrl_none
 set isOneStateSeq 0
 set ProfileFlag 0
@@ -94,13 +94,13 @@ set NewPortList {[
  	{ "name": "dst_TDEST", "direction": "out", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "dst_V_dest_V", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26"],
 		"CDFG" : "hfilt",
 		"Protocol" : "ap_ctrl_none",
 		"ControlExist" : "0", "ap_start" : "0", "ap_ready" : "0", "ap_done" : "0", "ap_continue" : "0", "ap_idle" : "0", "real_start" : "0",
-		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "5", "EstimateLatencyMax" : "5",
+		"Pipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "6", "EstimateLatencyMin" : "6", "EstimateLatencyMax" : "6",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -131,41 +131,47 @@ set RtlHierarchyInfo {[
 			{"Name" : "x", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "select_active_order", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "select_order", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "selection_0", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "buffer_r", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "selection_2", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "active_pixels_0_0", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "active_pixels_0_1", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "active_pixels_0_2", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "selection_1", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "active_pixels_1_0", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "active_pixels_1_1", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "active_pixels_1_2", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "active_pixels_2_0", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "active_pixels_2_1", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "active_pixels_2_2", "Type" : "OVld", "Direction" : "IO"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.selection_0_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.buffer_r_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.selection_2_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.selection_1_U", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_3_2_24_1_1_U1", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_3_2_24_1_1_U2", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_3_2_24_1_1_U3", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_3_2_24_1_1_U4", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_src_V_data_V_U", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_src_V_keep_V_U", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_src_V_strb_V_U", "Parent" : "0"},
-	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_src_V_user_V_U", "Parent" : "0"},
-	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_src_V_last_V_U", "Parent" : "0"},
-	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_src_V_id_V_U", "Parent" : "0"},
-	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_src_V_dest_V_U", "Parent" : "0"},
-	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_dst_V_data_V_U", "Parent" : "0"},
-	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_dst_V_keep_V_U", "Parent" : "0"},
-	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_dst_V_strb_V_U", "Parent" : "0"},
-	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_dst_V_user_V_U", "Parent" : "0"},
-	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_dst_V_last_V_U", "Parent" : "0"},
-	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_dst_V_id_V_U", "Parent" : "0"},
-	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_dst_V_dest_V_U", "Parent" : "0"}]}
+			{"Name" : "hfilt_stream_stream_axis_0_selection_2", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "hfilt_stream_stream_axis_0_buffer_2", "Type" : "Memory", "Direction" : "IO"},
+			{"Name" : "hfilt_stream_stream_axis_0_buffer_1", "Type" : "Memory", "Direction" : "IO"},
+			{"Name" : "hfilt_stream_stream_axis_0_buffer", "Type" : "Memory", "Direction" : "IO"},
+			{"Name" : "hfilt_stream_stream_axis_0_selection", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "hfilt_stream_stream_axis_0_selection_1", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "hfilt_stream_stream_axis_0_active_pixels_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "hfilt_stream_stream_axis_0_active_pixels_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "hfilt_stream_stream_axis_0_active_pixels", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "hfilt_stream_stream_axis_0_active_pixels_5_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "hfilt_stream_stream_axis_0_active_pixels_5_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "hfilt_stream_stream_axis_0_active_pixels_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "hfilt_stream_stream_axis_0_active_pixels_6_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "hfilt_stream_stream_axis_0_active_pixels_6_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "hfilt_stream_stream_axis_0_active_pixels_6", "Type" : "OVld", "Direction" : "IO"}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.hfilt_stream_stream_axis_0_selection_2_U", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.hfilt_stream_stream_axis_0_buffer_2_U", "Parent" : "0"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.hfilt_stream_stream_axis_0_buffer_1_U", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.hfilt_stream_stream_axis_0_buffer_U", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.hfilt_stream_stream_axis_0_selection_U", "Parent" : "0"},
+	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.hfilt_stream_stream_axis_0_selection_1_U", "Parent" : "0"},
+	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_7_2_24_1_1_U1", "Parent" : "0"},
+	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.sparsemux_7_2_24_1_1_U2", "Parent" : "0"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_3_2_24_1_1_U3", "Parent" : "0"},
+	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_3_2_24_1_1_U4", "Parent" : "0"},
+	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_3_2_24_1_1_U5", "Parent" : "0"},
+	{"ID" : "12", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_3_2_24_1_1_U6", "Parent" : "0"},
+	{"ID" : "13", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_src_V_data_V_U", "Parent" : "0"},
+	{"ID" : "14", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_src_V_keep_V_U", "Parent" : "0"},
+	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_src_V_strb_V_U", "Parent" : "0"},
+	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_src_V_user_V_U", "Parent" : "0"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_src_V_last_V_U", "Parent" : "0"},
+	{"ID" : "18", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_src_V_id_V_U", "Parent" : "0"},
+	{"ID" : "19", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_src_V_dest_V_U", "Parent" : "0"},
+	{"ID" : "20", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_dst_V_data_V_U", "Parent" : "0"},
+	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_dst_V_keep_V_U", "Parent" : "0"},
+	{"ID" : "22", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_dst_V_strb_V_U", "Parent" : "0"},
+	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_dst_V_user_V_U", "Parent" : "0"},
+	{"ID" : "24", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_dst_V_last_V_U", "Parent" : "0"},
+	{"ID" : "25", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_dst_V_id_V_U", "Parent" : "0"},
+	{"ID" : "26", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.regslice_both_dst_V_dest_V_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -177,39 +183,42 @@ set ArgLastReadFirstWriteLatency {
 		src_V_last_V {Type I LastRead 0 FirstWrite -1}
 		src_V_id_V {Type I LastRead 0 FirstWrite -1}
 		src_V_dest_V {Type I LastRead 0 FirstWrite -1}
-		dst_V_data_V {Type O LastRead -1 FirstWrite 4}
-		dst_V_keep_V {Type O LastRead -1 FirstWrite 4}
-		dst_V_strb_V {Type O LastRead -1 FirstWrite 4}
-		dst_V_user_V {Type O LastRead -1 FirstWrite 4}
-		dst_V_last_V {Type O LastRead -1 FirstWrite 4}
-		dst_V_id_V {Type O LastRead -1 FirstWrite 4}
-		dst_V_dest_V {Type O LastRead -1 FirstWrite 4}
+		dst_V_data_V {Type O LastRead -1 FirstWrite 5}
+		dst_V_keep_V {Type O LastRead -1 FirstWrite 5}
+		dst_V_strb_V {Type O LastRead -1 FirstWrite 5}
+		dst_V_user_V {Type O LastRead -1 FirstWrite 5}
+		dst_V_last_V {Type O LastRead -1 FirstWrite 5}
+		dst_V_id_V {Type O LastRead -1 FirstWrite 5}
+		dst_V_dest_V {Type O LastRead -1 FirstWrite 5}
 		y {Type IO LastRead -1 FirstWrite -1}
 		x {Type IO LastRead -1 FirstWrite -1}
 		select_active_order {Type IO LastRead -1 FirstWrite -1}
 		select_order {Type IO LastRead -1 FirstWrite -1}
-		selection_0 {Type I LastRead -1 FirstWrite -1}
-		buffer_r {Type IO LastRead -1 FirstWrite -1}
-		selection_2 {Type I LastRead -1 FirstWrite -1}
-		active_pixels_0_0 {Type IO LastRead -1 FirstWrite -1}
-		active_pixels_0_1 {Type IO LastRead -1 FirstWrite -1}
-		active_pixels_0_2 {Type IO LastRead -1 FirstWrite -1}
-		selection_1 {Type I LastRead -1 FirstWrite -1}
-		active_pixels_1_0 {Type IO LastRead -1 FirstWrite -1}
-		active_pixels_1_1 {Type IO LastRead -1 FirstWrite -1}
-		active_pixels_1_2 {Type IO LastRead -1 FirstWrite -1}
-		active_pixels_2_0 {Type IO LastRead -1 FirstWrite -1}
-		active_pixels_2_1 {Type IO LastRead -1 FirstWrite -1}
-		active_pixels_2_2 {Type IO LastRead -1 FirstWrite -1}}}
+		hfilt_stream_stream_axis_0_selection_2 {Type I LastRead -1 FirstWrite -1}
+		hfilt_stream_stream_axis_0_buffer_2 {Type IO LastRead -1 FirstWrite -1}
+		hfilt_stream_stream_axis_0_buffer_1 {Type IO LastRead -1 FirstWrite -1}
+		hfilt_stream_stream_axis_0_buffer {Type IO LastRead -1 FirstWrite -1}
+		hfilt_stream_stream_axis_0_selection {Type I LastRead -1 FirstWrite -1}
+		hfilt_stream_stream_axis_0_selection_1 {Type I LastRead -1 FirstWrite -1}
+		hfilt_stream_stream_axis_0_active_pixels_0 {Type IO LastRead -1 FirstWrite -1}
+		hfilt_stream_stream_axis_0_active_pixels_1 {Type IO LastRead -1 FirstWrite -1}
+		hfilt_stream_stream_axis_0_active_pixels {Type IO LastRead -1 FirstWrite -1}
+		hfilt_stream_stream_axis_0_active_pixels_5_0 {Type IO LastRead -1 FirstWrite -1}
+		hfilt_stream_stream_axis_0_active_pixels_5_1 {Type IO LastRead -1 FirstWrite -1}
+		hfilt_stream_stream_axis_0_active_pixels_5 {Type IO LastRead -1 FirstWrite -1}
+		hfilt_stream_stream_axis_0_active_pixels_6_0 {Type IO LastRead -1 FirstWrite -1}
+		hfilt_stream_stream_axis_0_active_pixels_6_1 {Type IO LastRead -1 FirstWrite -1}
+		hfilt_stream_stream_axis_0_active_pixels_6 {Type IO LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "5", "Max" : "5"}
-	, {"Name" : "Interval", "Min" : "6", "Max" : "6"}
+	{"Name" : "Latency", "Min" : "6", "Max" : "6"}
+	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
 ]}
 
 set PipelineEnableSignalInfo {[
+	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
 ]}
 
 set Spec2ImplPortList { 

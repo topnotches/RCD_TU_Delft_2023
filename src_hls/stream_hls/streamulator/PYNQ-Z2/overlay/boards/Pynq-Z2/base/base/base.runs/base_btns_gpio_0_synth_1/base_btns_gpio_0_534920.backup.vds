@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Dec 15 16:19:49 2023
+# Process ID: 534920
+# Current directory: /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/PYNQ-Z2/overlay/boards/Pynq-Z2/base/base/base.runs/base_btns_gpio_0_synth_1
+# Command line: vivado -log base_btns_gpio_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_btns_gpio_0.tcl
+# Log file: /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/PYNQ-Z2/overlay/boards/Pynq-Z2/base/base/base.runs/base_btns_gpio_0_synth_1/base_btns_gpio_0.vds
+# Journal file: /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/PYNQ-Z2/overlay/boards/Pynq-Z2/base/base/base.runs/base_btns_gpio_0_synth_1/vivado.jou
+# Running On: bobby, OS: Linux, CPU Frequency: 3966.117 MHz, CPU Physical cores: 16, Host memory: 16072 MB
+#-----------------------------------------------------------
+source base_btns_gpio_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1337.711 ; gain = 26.836 ; free physical = 4630 ; free virtual = 6378
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/PYNQ-Z2/overlay/boards/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/topnotches/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: base_btns_gpio_0
+Command: synth_design -top base_btns_gpio_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 535203

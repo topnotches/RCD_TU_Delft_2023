@@ -1,3 +1,3 @@
 set ModuleHierarchy {[{
-"Name" : "hfilt","ID" : "0","Type" : "sequential"
+"Name" : "hfilt","ID" : "0","Type" : "pipeline"
 }]}

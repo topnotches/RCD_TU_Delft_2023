@@ -3,15 +3,15 @@
         "name": "hfilt",
         "file": "hfilt.cpp",
         "fileloc": "23",
-        "instructions": "228",
-        "total_instructions": "228",
+        "instructions": "216",
+        "total_instructions": "216",
         "calls": "",
-        "basicblocks": "4",
+        "basicblocks": "16",
         "loads": {
-            "G": "21"
+            "G": "22"
         },
         "stores": {
-            "G": "16"
+            "G": "18"
         }
     }
 }

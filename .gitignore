@@ -1,3 +1,5 @@
 
 
-./src_hls/stream_hls/streamulator/RCD_HLS
+**/RCD_HLS/*
+**/RCD_HLS/solution1/*
+**/RCD_HLS/**/**/*

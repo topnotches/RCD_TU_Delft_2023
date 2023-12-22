@@ -726,12 +726,12 @@
        ^~~
        VITIS_LOOP_169_3: 
 /home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/.autopilot/db/hfilt.pp.0.cpp:27209:8: note: FIX-IT applied suggested code changes
-/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/.autopilot/db/hfilt.pp.0.cpp:32450:50: error: Invalid Directive: for current device, RAM_2P + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/.autopilot/db/hfilt.pp.0.cpp:32454:50: error: Invalid Directive: for current device, RAM_2P + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS bind_storage variable=buffer[0] type=RAM_2P impl=lutram latency=-1
                                                  ^
-/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/.autopilot/db/hfilt.pp.0.cpp:32451:50: error: Invalid Directive: for current device, RAM_2P + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/.autopilot/db/hfilt.pp.0.cpp:32455:50: error: Invalid Directive: for current device, RAM_2P + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS bind_storage variable=buffer[1] type=RAM_2P impl=lutram latency=-1
                                                  ^
-/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/.autopilot/db/hfilt.pp.0.cpp:32452:50: error: Invalid Directive: for current device, RAM_2P + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+/home/topnotches/RCD_TU_Delft_2023/src_hls/stream_hls/streamulator/RCD_HLS/solution1/.autopilot/db/hfilt.pp.0.cpp:32456:50: error: Invalid Directive: for current device, RAM_2P + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
 #pragma HLS bind_storage variable=buffer[2] type=RAM_2P impl=lutram latency=-1
                                                  ^

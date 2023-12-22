@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'hfilt'
 ================================================================
 + General Information: 
-    * Date:           Fri Dec 15 15:25:29 2023
+    * Date:           Fri Dec 15 17:18:35 2023
     * Version:        2023.2 (Build 4023990 on Oct 11 2023)
     * Project:        RCD_HLS
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -19,7 +19,7 @@
     | Modules | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
     | & Loops | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
     +---------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
-    |+ hfilt  |     -|  0.14|        5|  50.000|         -|        6|     -|        no|     -|   -|  689 (~0%)|  3033 (5%)|    -|
+    |+ hfilt  |     -|  0.24|        6|  60.000|         -|        1|     -|       yes|     -|   -|  1171 (1%)|  2478 (4%)|    -|
     +---------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
 
 
@@ -71,41 +71,40 @@
 | Name                    | DSP | Pragma | Variable    | Op  | Impl   | Latency |
 +-------------------------+-----+--------+-------------+-----+--------+---------+
 | + hfilt                 | 0   |        |             |     |        |         |
-|   add_ln67_fu_402_p2    |     |        | add_ln67    | add | fabric | 0       |
-|   add_ln70_fu_423_p2    |     |        | add_ln70    | add | fabric | 0       |
-|   add_ln75_fu_444_p2    |     |        | add_ln75    | add | fabric | 0       |
-|   add_ln84_fu_904_p2    |     |        | add_ln84    | add | fabric | 0       |
-|   add_ln83_1_fu_699_p2  |     |        | add_ln83_1  | add | fabric | 0       |
-|   add_ln83_fu_920_p2    |     |        | add_ln83    | add | fabric | 0       |
-|   empty_17_fu_1093_p2   |     |        | empty_17    | sub | fabric | 0       |
-|   add_ln95_fu_969_p2    |     |        | add_ln95    | add | fabric | 0       |
-|   add_ln94_1_fu_763_p2  |     |        | add_ln94_1  | add | fabric | 0       |
-|   add_ln94_fu_985_p2    |     |        | add_ln94    | add | fabric | 0       |
-|   empty_19_fu_1108_p2   |     |        | empty_19    | sub | fabric | 0       |
-|   add_ln105_fu_1034_p2  |     |        | add_ln105   | add | fabric | 0       |
-|   add_ln104_1_fu_827_p2 |     |        | add_ln104_1 | add | fabric | 0       |
-|   add_ln104_fu_1050_p2  |     |        | add_ln104   | add | fabric | 0       |
-|   empty_21_fu_1123_p2   |     |        | empty_21    | sub | fabric | 0       |
-|   add_ln146_fu_1253_p2  |     |        | add_ln146   | add | fabric | 0       |
-|   add_ln153_fu_1264_p2  |     |        | add_ln153   | add | fabric | 0       |
-|   add_ln157_fu_1277_p2  |     |        | add_ln157   | add | fabric | 0       |
-|   add_ln165_fu_1312_p2  |     |        | add_ln165   | add | fabric | 0       |
+|   add_ln84_fu_915_p2    |     |        | add_ln84    | add | fabric | 0       |
+|   add_ln83_1_fu_731_p2  |     |        | add_ln83_1  | add | fabric | 0       |
+|   add_ln83_fu_741_p2    |     |        | add_ln83    | add | fabric | 0       |
+|   empty_15_fu_1068_p2   |     |        | empty_15    | sub | fabric | 0       |
+|   add_ln95_fu_967_p2    |     |        | add_ln95    | add | fabric | 0       |
+|   add_ln94_1_fu_808_p2  |     |        | add_ln94_1  | add | fabric | 0       |
+|   add_ln94_fu_818_p2    |     |        | add_ln94    | add | fabric | 0       |
+|   empty_17_fu_1083_p2   |     |        | empty_17    | sub | fabric | 0       |
+|   add_ln105_fu_1019_p2  |     |        | add_ln105   | add | fabric | 0       |
+|   add_ln104_1_fu_885_p2 |     |        | add_ln104_1 | add | fabric | 0       |
+|   add_ln104_fu_895_p2   |     |        | add_ln104   | add | fabric | 0       |
+|   empty_19_fu_1098_p2   |     |        | empty_19    | sub | fabric | 0       |
+|   add_ln146_fu_1228_p2  |     |        | add_ln146   | add | fabric | 0       |
+|   add_ln153_fu_388_p2   |     |        | add_ln153   | add | fabric | 0       |
+|   add_ln157_fu_474_p2   |     |        | add_ln157   | add | fabric | 0       |
+|   add_ln165_fu_493_p2   |     |        | add_ln165   | add | fabric | 0       |
 +-------------------------+-----+--------+-------------+-----+--------+---------+
 
 
 ================================================================
 == Storage Report
 ================================================================
-+-----------------+--------+------+------+------+--------+-------------+--------+---------+------------------+
-| Name            | Usage  | Type | BRAM | URAM | Pragma | Variable    | Impl   | Latency | Bitwidth, Depth, |
-|                 |        |      |      |      |        |             |        |         | Banks            |
-+-----------------+--------+------+------+------+--------+-------------+--------+---------+------------------+
-| + hfilt         |        |      | 0    | 0    |        |             |        |         |                  |
-|   selection_0_U | rom_2p |      |      |      |        | selection_0 | auto   | 1       | 2, 3, 1          |
-|   buffer_r_U    | ram_2p |      |      |      | pragma | buffer_r    | lutram | 1       | 32, 3840, 1      |
-|   selection_2_U | rom_2p |      |      |      |        | selection_2 | auto   | 1       | 2, 3, 1          |
-|   selection_1_U | rom_2p |      |      |      |        | selection_1 | auto   | 1       | 2, 3, 1          |
-+-----------------+--------+------+------+------+--------+-------------+--------+---------+------------------+
++--------------------------------------------+--------+------+------+------+--------+----------------------------------------+--------+---------+------------------+
+| Name                                       | Usage  | Type | BRAM | URAM | Pragma | Variable                               | Impl   | Latency | Bitwidth, Depth, |
+|                                            |        |      |      |      |        |                                        |        |         | Banks            |
++--------------------------------------------+--------+------+------+------+--------+----------------------------------------+--------+---------+------------------+
+| + hfilt                                    |        |      | 0    | 0    |        |                                        |        |         |                  |
+|   hfilt_stream_stream_axis_0_selection_2_U | rom_2p |      |      |      |        | hfilt_stream_stream_axis_0_selection_2 | auto   | 1       | 2, 3, 1          |
+|   hfilt_stream_stream_axis_0_buffer_2_U    | ram_2p |      |      |      | pragma | hfilt_stream_stream_axis_0_buffer_2    | lutram | 1       | 24, 1280, 1      |
+|   hfilt_stream_stream_axis_0_buffer_1_U    | ram_2p |      |      |      | pragma | hfilt_stream_stream_axis_0_buffer_1    | lutram | 1       | 24, 1280, 1      |
+|   hfilt_stream_stream_axis_0_buffer_U      | ram_2p |      |      |      | pragma | hfilt_stream_stream_axis_0_buffer      | lutram | 1       | 24, 1280, 1      |
+|   hfilt_stream_stream_axis_0_selection_U   | rom_2p |      |      |      |        | hfilt_stream_stream_axis_0_selection   | auto   | 1       | 2, 3, 1          |
+|   hfilt_stream_stream_axis_0_selection_1_U | rom_2p |      |      |      |        | hfilt_stream_stream_axis_0_selection_1 | auto   | 1       | 2, 3, 1          |
++--------------------------------------------+--------+------+------+------+--------+----------------------------------------+--------+---------+------------------+
 
 
 ================================================================
@@ -124,10 +123,19 @@
 | Type         | Options                                               | Location                            |
 +--------------+-------------------------------------------------------+-------------------------------------+
 | interface    | ap_ctrl_none port = return                            | ../hfilt.cpp:25 in hfilt            |
-| pipeline     | II = 0                                                | ../hfilt.cpp:28 in hfilt            |
+| pipeline     | II = 1                                                | ../hfilt.cpp:28 in hfilt            |
 | bind_storage | variable=buffer[0] type=RAM_2P impl=lutram latency=-1 | ../hfilt.cpp:39 in hfilt, buffer[0] |
 | bind_storage | variable=buffer[1] type=RAM_2P impl=lutram latency=-1 | ../hfilt.cpp:40 in hfilt, buffer[1] |
 | bind_storage | variable=buffer[2] type=RAM_2P impl=lutram latency=-1 | ../hfilt.cpp:41 in hfilt, buffer[2] |
 +--------------+-------------------------------------------------------+-------------------------------------+
+
+* Inferred Pragmas
++--------------------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Source Pragma            | Inferred Pragma | Options                                                                                                                       | Location                                                                                                                                                                                                   |
++--------------------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| pipeline ../hfilt.cpp:28 | array_partition | dim=1 type=complete  variable=_ZZ5hfiltRN3hls6streamINS_4axisI7ap_uintILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_E13active_pixels | variable hfilt(hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)::active_pixels in hfilt |
+| pipeline ../hfilt.cpp:28 | array_partition | dim=1 type=complete  variable=_ZZ5hfiltRN3hls6streamINS_4axisI7ap_uintILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_E6buffer         | variable hfilt(hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)::buffer in hfilt        |
+| pipeline ../hfilt.cpp:28 | array_partition | dim=2 type=complete  variable=_ZZ5hfiltRN3hls6streamINS_4axisI7ap_uintILi32EELm1ELm1ELm1ELh56ELb0EEELi0EEES6_E9selection      | variable hfilt(hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 1ul, 1ul, 1ul, (unsigned char)56, false>, 0>&)::selection in hfilt     |
++--------------------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 

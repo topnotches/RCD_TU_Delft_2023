@@ -2,7 +2,7 @@
     <includePaths/>
     <libraryPaths/>
     <Simulation argv="">
-        <SimFlow name="csim" ldflags="" mflags="" csimMode="0" lastCsimMode="0" setup="false" optimizeCompile="false" clean="false"/>
+        <SimFlow name="csim" ldflags="" mflags="" csimMode="0" lastCsimMode="0"/>
     </Simulation>
     <files xmlns="">
         <file name="../../axipng.cpp" sc="0" tb="1" cflags="-Wno-unknown-pragmas" csimflags="" blackbox="false"/>
